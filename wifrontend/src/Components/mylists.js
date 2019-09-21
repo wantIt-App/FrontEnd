@@ -5,12 +5,14 @@ class MyLists extends React.Component {
     render() {
       return (
         <div className='MyLists'>
-          <h1>My Lists</h1>
-          <textarea />
-          <button>Search Lists</button>
+          <div className="animated fadeIn">
+            <h1>My Lists</h1>
+            <textarea />
+            <button>Search Lists</button>
 
-          <div className='ListGroup'>
-           <List />
+            <div className='ListGroup'>
+            <List />
+            </div>
           </div>
         </div>
       )

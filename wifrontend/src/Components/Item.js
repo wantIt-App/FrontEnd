@@ -5,20 +5,22 @@ class Item extends React.Component {
     render() {
       return (
           <div className='Item animated fadeIn GridContainer'>
-            <div className='GridRow'>
-              <img src="https://picsum.photos/100" />
-              <div>
-                <h2>Item Name</h2>
-                <p>Description</p>
-              </div>
-              <a href='' className="Want">
-              <IconContext.Provider value={{ reverseColor: "#fff", color: "#6495ed", className: "global-class-name" }}>
+            <a href='' className='Selected'>
+              <div className='GridRow'>
+                <img src="https://picsum.photos/100" />
                 <div>
-                  <FaHandPaper />
+                  <h2>Item Name</h2>
+                  <p>Description</p>
                 </div>
-              </IconContext.Provider>
-              </a>
-            </div>
+                <div className="Want">
+                <IconContext.Provider value={{ }}>
+                  <div>
+                    <FaHandPaper />
+                  </div>
+                </IconContext.Provider>
+                </div>
+              </div>
+            </a>
           </div>
       )
     }

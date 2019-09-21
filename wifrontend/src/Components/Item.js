@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaHandPaper } from "react-icons/fa";
 import { IconContext } from "react-icons";
+
 class Item extends React.Component {
   constructor(props) {
     super(props)

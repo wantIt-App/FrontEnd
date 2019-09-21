@@ -2,6 +2,7 @@ import React from 'react'
 import Login from './Components/login'
 import ListView from './Components/listview'
 import MyLists from './Components/mylists'
+import Logo from './logo.png'
 
 
 class App extends React.Component {
@@ -26,7 +27,7 @@ class App extends React.Component {
     if (this.state.component == 'Login' || this.state.component == undefined) {
       return (
         <div className='constrain'>
-          <h2>Logo Placeholder</h2>
+          <img src={Logo} className='logo'/>
           <div className='menu'>
             <button onClick={this.displayLogin} className='active'>Login</button>
             <button onClick={this.displayMyLists}>My Lists</button>

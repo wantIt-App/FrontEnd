@@ -25,7 +25,21 @@ body::after {
   transform-origin: 0;
   width: 100%;
 }
-
+a,
+a:link,
+a:visited,
+a:hover,
+a:active{
+    text-decoration: none;
+}
+a:visited {
+  color: #666;
+}
+a:hover{
+  color: #6495ed;
+  display: block;
+  text-decoration: none;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -117,9 +131,22 @@ input {
 }
 
 .GridRow {
+  border: 5px solid #fff;
   display: grid;
   grid-template-columns: 120px auto 20px;
   grid-row-gap: 1ch;
+  line-height: 1;
+}
+.GridRow svg {
+  color: #ccc;
+}
+
+.GridRow:hover {
+  border: 5px solid #6495ed;
+  color: #6495ed
+}
+.GridRow:hover svg {
+  color: #6495ed;
 }
 
 .Want {

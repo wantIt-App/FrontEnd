@@ -15,7 +15,6 @@ class Item extends React.Component {
                 <div>
                   <h2>{this.props.name}</h2>
                   <p>{this.props.description}</p>
-                  <p>{this.props.wants}</p>
                 </div>
                 <div className="Want">
                   <IconContext.Provider value={{  }}>
@@ -23,8 +22,10 @@ class Item extends React.Component {
                       <FaHandPaper />
                     
                   </IconContext.Provider> 
+                  <p>{this.props.wants} Would Like</p>
                 </div>      
               </div>
+              
             </a>
           </div>
       )

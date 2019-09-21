@@ -82,3 +82,29 @@ button {
   background-color: #6495ed;
   color: #fff;
 }
+
+input {
+  display: inline-block;
+  float: left;
+  height: 20px;
+  margin-right: .5em;
+}
+
+.SearchButton {
+  background: #fff;
+  cursor: pointer;
+  display: inline-block;
+  height: 24px;
+  width: 25px;
+  margin-left: -32px;
+  margin-top: 1px;
+  text-align: center;
+}
+
+.SearchButton div {
+  padding-top: 4px;
+}
+
+.SearchBox {
+  overflow: hidden;
+}

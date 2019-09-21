@@ -35,12 +35,6 @@ class ListView extends React.Component {
             {this.state.items.map(item => {
     
             return (
-              // <div key={item.id}>
-              //       <h2>{item.name}</h2>
-              //       <p>{item.description}</p>
-              //       <p>{item.img}</p>
-              //       <p>{item.wants}</p>
-              //   </div>
               <Item key={item.id} name={item.name}
               description={item.description} img={item.img}
               wants={item.wants} />

@@ -1,7 +1,5 @@
 import React from 'react'
 import ReactModal from 'react-modal';
-import Logo from '../logo.png'
-
 class Login extends React.Component {
   constructor () {
     super();
@@ -28,9 +26,10 @@ class Login extends React.Component {
         <ReactModal 
            isOpen={this.state.showModal}
            contentLabel="Minimal Modal Example"
+           className="Modal"
+           overlayClassName="Overlay"
         >
           <button onClick={this.handleCloseModal}>X</button>
-          <img src={Logo} />
           <p>Name:</p> <textarea />
           <p>Email:</p> <textarea />
           <p>Password:</p> <textarea />

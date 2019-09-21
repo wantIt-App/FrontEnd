@@ -2,7 +2,7 @@ import React from 'react'
 import Login from './Components/login'
 import MyLists from './Components/mylists'
 import ListView from './Components/listview'
-import Logo from './logo.png'
+import Logo from './logo-yellow.svg'
 import { Link, Switch, Route } from 'react-router-dom'
 
 
@@ -17,7 +17,9 @@ class App extends React.Component {
   render() {
       return (
         <div className='constrain'>
-          <img src={Logo} className='logo'/>
+          <div className="header">
+            <img src={Logo} className='logo'/>
+          </div>
           <div className='menu'>
           <Link to='/'><button className='active'>Login</button></Link>
           <Link to='/lists'><button>My Lists</button></Link>

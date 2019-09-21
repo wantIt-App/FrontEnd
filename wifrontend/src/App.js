@@ -1,5 +1,7 @@
 import React from 'react'
 import Login from './Components/login'
+import ListView from './Components/listview'
+import MyLists from './Components/mylists'
 
 
 class App extends React.Component {
@@ -7,6 +9,8 @@ class App extends React.Component {
     return (
       <div>
         <Login />
+        <MyLists />
+        <ListView />
       </div>
     )
   }

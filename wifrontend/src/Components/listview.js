@@ -1,8 +1,18 @@
 import React from 'react'
+import Item from './Item'
 
 class ListView extends React.Component {
     render() {
-      return <h1>Users</h1>
+      return (
+        <div className='List'>
+          <h1>List Name</h1>
+          <button>Add Item</button>
+
+          <div className='ListItems'>
+           <Item />
+          </div>
+        </div>
+      )
     }
   }
   

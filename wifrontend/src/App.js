@@ -41,7 +41,7 @@ class App extends React.Component {
     } else if (this.state.component == 'MyLists') {
       return (
         <div className='constrain'>
-          <h2>Logo Placeholder</h2>
+          <img src={Logo} className='logo'/>
           <div className='menu'>
             <button onClick={this.displayLogin}>Login</button>
             <button onClick={this.displayMyLists} className='active'>My Lists</button>
@@ -55,7 +55,7 @@ class App extends React.Component {
     } else {
       return (
         <div className='constrain'>
-          <h2>Logo Placeholder</h2>
+          <img src={Logo} className='logo'/>
           <div className='menu'>
             <button onClick={this.displayLogin}>Login</button>
             <button onClick={this.displayMyLists}>My Lists</button>

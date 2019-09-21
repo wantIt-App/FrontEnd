@@ -26,11 +26,13 @@ class App extends React.Component {
     if (this.state.component == 'Login' || this.state.component == undefined) {
       return (
         <div className='constrain'>
-          <h3>Menu</h3>
-          <button onClick={this.displayLogin}>Login</button>
-          <button onClick={this.displayMyLists}>My Lists</button>
-          <button onClick={this.displayListView}>List View</button>
-          <div className="constrain__inner">
+          <h2>Logo Placeholder</h2>
+          <div className='menu'>
+            <button onClick={this.displayLogin} className='active'>Login</button>
+            <button onClick={this.displayMyLists}>My Lists</button>
+            <button onClick={this.displayListView}>List View</button>
+          </div>
+          <div className='constrain__inner'>
             <Login/>
           </div>
         </div>
@@ -38,11 +40,13 @@ class App extends React.Component {
     } else if (this.state.component == 'MyLists') {
       return (
         <div className='constrain'>
-          <h3>Menu</h3>
-          <button onClick={this.displayLogin}>Login</button>
-          <button onClick={this.displayMyLists}>My Lists</button>
-          <button onClick={this.displayListView}>List View</button>
-          <div className="constrain__inner">
+          <h2>Logo Placeholder</h2>
+          <div className='menu'>
+            <button onClick={this.displayLogin}>Login</button>
+            <button onClick={this.displayMyLists} className='active'>My Lists</button>
+            <button onClick={this.displayListView}>List View</button>
+          </div>
+          <div className='constrain__inner'>
             <MyLists/>
           </div>
         </div>
@@ -50,11 +54,13 @@ class App extends React.Component {
     } else {
       return (
         <div className='constrain'>
-          <h3>Menu</h3>
-          <button onClick={this.displayLogin}>Login</button>
-          <button onClick={this.displayMyLists}>My Lists</button>
-          <button onClick={this.displayListView}>List View</button>
-          <div className="constrain__inner">
+          <h2>Logo Placeholder</h2>
+          <div className='menu'>
+            <button onClick={this.displayLogin}>Login</button>
+            <button onClick={this.displayMyLists}>My Lists</button>
+            <button onClick={this.displayListView} className='active'>List View</button>
+          </div>
+          <div className='constrain__inner'>
             <ListView/>
           </div>
         </div>

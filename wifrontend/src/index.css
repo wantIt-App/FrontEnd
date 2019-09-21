@@ -51,7 +51,7 @@ h1, h2, h3, h4 {
 
 button {
   background-color: #fff;
-  border: 0;
+  border: 1px solid #6495ed;
   border-radius: 0px;
   color: #fff; 
   cursor: pointer;
@@ -67,5 +67,18 @@ button {
   vertical-align: top;
   white-space: normal;
   background: #6495ed;
+  outline: none;
   margin: 0 0 0.5em;
+}
+
+.menu button {
+  background-color: #fff;
+  color: #6495ed;
+  margin-right: .5em;
+  padding: .25em;
+}
+
+.menu button.active {
+  background-color: #6495ed;
+  color: #fff;
 }

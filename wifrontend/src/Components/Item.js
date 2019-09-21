@@ -2,19 +2,22 @@ import React from 'react'
 import { FaHandPaper } from "react-icons/fa";
 import { IconContext } from "react-icons";
 class Item extends React.Component {
+  constructor(props) {
+    super(props)
+  }
     render() {
       return (
           <div className='Item animated fadeIn'>
             <div className='flex'>
-              <img src="https://picsum.photos/100" />
+              <img src={this.props.img} />
               <div>
-                <h2>Item Name</h2>
-                <p>Description</p>
+                <h2>{this.props.name}</h2>
+                <p>{this.props.description}</p>
               </div>
               <a href=''>
               <IconContext.Provider value={{ reverseColor: "#fff", color: "#6495ed", className: "global-class-name" }}>
                 <div>
-                  <FaHandPaper />
+                  <FaHandPaper /> <p>{this.props.wants}</p>
                 </div>
               </IconContext.Provider>
               </a>

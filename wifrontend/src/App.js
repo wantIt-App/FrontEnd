@@ -1,74 +1,40 @@
 import React from 'react'
 import Login from './Components/login'
-import ListView from './Components/listview'
 import MyLists from './Components/mylists'
+import ListView from './Components/listview'
 import Logo from './logo.png'
+import { Link, Switch, Route } from 'react-router-dom'
 
 
 class App extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { component: undefined }
+
   }
 
-  displayLogin=()=>{
-    this.setState({ component: 'Login' })
-  }
 
-  displayMyLists=()=>{
-    this.setState({ component: 'MyLists' })
-  }
-
-  displayListView=()=>{
-    this.setState({ component: 'ListView' })
-  }
 
   render() {
-    if (this.state.component == 'Login' || this.state.component == undefined) {
       return (
         <div className='constrain'>
           <img src={Logo} className='logo'/>
           <div className='menu'>
-            <button onClick={this.displayLogin} className='active'>Login</button>
-            <button onClick={this.displayMyLists}>My Lists</button>
-            <button onClick={this.displayListView}>List View</button>
+          <Link to='/'><button className='active'>Login</button></Link>
+          <Link to='/lists'><button>My Lists</button></Link>
           </div>
           <div className='constrain__inner'>
-            <Login/>
-          </div>
-        </div>
-      )
-    } else if (this.state.component == 'MyLists') {
-      return (
-        <div className='constrain'>
-          <img src={Logo} className='logo'/>
-          <div className='menu'>
-            <button onClick={this.displayLogin}>Login</button>
-            <button onClick={this.displayMyLists} className='active'>My Lists</button>
-            <button onClick={this.displayListView}>List View</button>
-          </div>
-          <div className='constrain__inner'>
-            <MyLists/>
-          </div>
-        </div>
-      )
-    } else {
-      return (
-        <div className='constrain'>
-          <img src={Logo} className='logo'/>
-          <div className='menu'>
-            <button onClick={this.displayLogin}>Login</button>
-            <button onClick={this.displayMyLists}>My Lists</button>
-            <button onClick={this.displayListView} className='active'>List View</button>
-          </div>
-          <div className='constrain__inner'>
-            <ListView/>
+          <Switch>
+            <Route exact path='/' component={Login}/>
+            <Route path='/lists' component={MyLists}/>
+            <Route path='/listview' component={ListView}/>
+          </Switch>
           </div>
         </div>
       )
     }
   }
-}
+
 
 
 export default App
+

@@ -4,14 +4,14 @@ import { IconContext } from "react-icons";
 class Item extends React.Component {
     render() {
       return (
-          <div className='Item animated fadeIn'>
-            <div className='flex'>
+          <div className='Item animated fadeIn GridContainer'>
+            <div className='GridRow'>
               <img src="https://picsum.photos/100" />
               <div>
                 <h2>Item Name</h2>
                 <p>Description</p>
               </div>
-              <a href=''>
+              <a href='' className="Want">
               <IconContext.Provider value={{ reverseColor: "#fff", color: "#6495ed", className: "global-class-name" }}>
                 <div>
                   <FaHandPaper />

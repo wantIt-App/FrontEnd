@@ -109,3 +109,19 @@ input {
 .SearchBox {
   overflow: hidden;
 }
+
+.GridContainer {
+  display: grid;
+  grid-row-gap: 20px;
+  margin: 20px 0;
+}
+
+.GridRow {
+  display: grid;
+  grid-template-columns: 120px auto 20px;
+  grid-row-gap: 1ch;
+}
+
+.Want {
+  align-self: center;
+}

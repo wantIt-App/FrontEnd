@@ -30,7 +30,9 @@ class App extends React.Component {
           <button onClick={this.displayLogin}>Login</button>
           <button onClick={this.displayMyLists}>My Lists</button>
           <button onClick={this.displayListView}>List View</button>
-          <Login/>
+          <div className="constrain__inner">
+            <Login/>
+          </div>
         </div>
       )
     } else if (this.state.component == 'MyLists') {
@@ -40,7 +42,9 @@ class App extends React.Component {
           <button onClick={this.displayLogin}>Login</button>
           <button onClick={this.displayMyLists}>My Lists</button>
           <button onClick={this.displayListView}>List View</button>
-          <MyLists/>
+          <div className="constrain__inner">
+            <MyLists/>
+          </div>
         </div>
       )
     } else {
@@ -50,7 +54,9 @@ class App extends React.Component {
           <button onClick={this.displayLogin}>Login</button>
           <button onClick={this.displayMyLists}>My Lists</button>
           <button onClick={this.displayListView}>List View</button>
-          <ListView/>
+          <div className="constrain__inner">
+            <ListView/>
+          </div>
         </div>
       )
     }

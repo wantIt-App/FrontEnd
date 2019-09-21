@@ -3,7 +3,7 @@ import React from 'react'
 class Item extends React.Component {
     render() {
       return (
-          <div className='Item'>
+          <div className='Item animated fadeIn'>
             <h2>Item Name</h2>
             <img src="https://picsum.photos/100" />
             <p>Description</p>

@@ -7,7 +7,7 @@ import MyLists from './Components/mylists'
 class App extends React.Component {
   render() {
     return (
-      <div>
+      <div className='constrain'>
         <Login />
         <MyLists />
         <ListView />

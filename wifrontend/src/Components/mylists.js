@@ -7,6 +7,7 @@ import { IconContext } from "react-icons";
 let lists = [
   {name: "Mom's Stuff",
    description: 'Items that belonged to Mom.',
+   items: [],
    id: 1},
    {name: 'Moving Out',
    description: 'Anyone need/want anything?',

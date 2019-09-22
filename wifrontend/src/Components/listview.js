@@ -48,7 +48,8 @@ class ListView extends React.Component {
            contentLabel="Minimal Modal Example"
         >
           <button onClick={this.handleCloseModal}>X</button>
-          <h1>Upload form Here</h1>
+          <input type='file' id='single' />
+          Description: <textarea />
           <button>Add Item</button>
         </ReactModal>
 

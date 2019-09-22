@@ -8,10 +8,16 @@ class List extends React.Component {
 
     render() {
       return (
-          <div className='Item animated fadeIn'>
-            <h2>{this.props.name}</h2>
-            <p>{this.props.description}</p>
-            <Link to='/listview'><button className="button">View List</button></Link>
+          <div className='Item animated fadeIn GridContainer'>
+            <div className='GridRow GridRow--two-column'>
+              <div>
+                <h2>{this.props.name}</h2>
+                <p>{this.props.description}</p>
+              </div>
+              <div class="view-button">
+                <Link to='/listview' className="button">View List</Link>
+              </div>
+            </div>
           </div>
       )
     }

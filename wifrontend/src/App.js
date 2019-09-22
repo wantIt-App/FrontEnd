@@ -16,11 +16,16 @@ class App extends React.Component {
       return (
         <div className='constrain'>
           <div className="header">
+            {/* <div>
+              <Link to='/'>
+                <div className="sticker logo animated slideInUp">
+                  <img className="decal shadow" src={Logo} alt="" />
+                  <img className="decal left" src={Logo} alt="" />
+                  <img className="decal right" src={Logo} alt="" />
+                </div>
+              </Link>
+            </div> */}
             <Link to='/'><img src={Logo} className='logo animated slideInUp'/></Link>
-          </div>
-          <div className='menu'>
-          <Link to='/' className='button'>Login</Link>
-          <Link to='/lists' className='button'>My Lists</Link>
           </div>
           <div className='constrain__inner'>
           <Switch>

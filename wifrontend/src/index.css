@@ -85,6 +85,10 @@ h1, h2, h3, h4 {
   margin: 0 0 0.5em;
 }
 
+.menu {
+  margin-top: 20px;
+}
+
 .menu .button {
   background-color: #fff;
   color: #6495ed;

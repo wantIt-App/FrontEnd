@@ -84,13 +84,9 @@ class ListView extends React.Component {
     .then(images => {
       this.setState({ img: images[0].url })
     })
-    .catch(err => {
-      err.json().then(e => {
-        console.log(e)
-      })
-    })
 
-    console.log(this.state.img, this.state.name, this.state.desc)
+
+    await console.log(this.state.img, this.state.name, this.state.desc)
   }
 
   onNameChange = e => {this.setState({ name: e.target.value })}
@@ -102,7 +98,7 @@ class ListView extends React.Component {
           <div className='menu'>
             <Link to='/lists' className='button'>Back to My Lists</Link>
           </div>
-          <h1>List Name</h1>
+          <h1>{this.props.location.state.name}</h1>
           <button onClick={this.handleOpenModal} className="button">Add Item</button>
           <ReactModal 
            isOpen={this.state.showModal}

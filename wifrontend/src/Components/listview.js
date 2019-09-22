@@ -42,14 +42,14 @@ class ListView extends React.Component {
       return (
         <div className='List animated fadeIn'>
           <h1>List Name</h1>
-          <button onClick={this.handleOpenModal}>Add Item</button>
+          <button onClick={this.handleOpenModal} className="button">Add Item</button>
           <ReactModal 
            isOpen={this.state.showModal}
            contentLabel="Minimal Modal Example"
         >
-          <button onClick={this.handleCloseModal}>X</button>
+          <button onClick={this.handleCloseModal} className="button">X</button>
           <h1>Upload form Here</h1>
-          <button>Add Item</button>
+          <button className="button">Add Item</button>
         </ReactModal>
 
           <div className='ListItems animated fadeIn delay-.25s'>

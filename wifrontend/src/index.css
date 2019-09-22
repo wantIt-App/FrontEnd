@@ -168,7 +168,7 @@ input {
 }
 
 .GridRow {
-  border: 5px solid rgb(255, 255, 255, .9);
+  border: 5px solid rgb(255, 255, 255, .15);
   display: grid;
   grid-template-columns: 120px auto 1fr;
   grid-row-gap: 1ch;
@@ -249,3 +249,21 @@ button ~ button {
   background-color: rgba(100,149,237, .5);
 }
 
+@media only screen and (max-width: 600px) {
+  body.scrolled .logo {
+    margin-top: 0;
+    height: 60px;
+  }
+  .constrain {
+    padding: 1em;
+  }
+  .GridRow {
+    grid-template-columns: 90px auto 1fr;
+  }
+  .GridRow img {
+    height: 75px;
+  }
+  .GridRow h2 {
+    font-size: 20px;
+  }
+}

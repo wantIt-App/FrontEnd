@@ -15,7 +15,7 @@ class App extends React.Component {
   render() {
       return (
         <div className='constrain'>
-          <div className="header" className={this.props.location.pathname == '/' ? 'login' : ''}>
+          <div className={this.props.location.pathname == '/' ? 'homepage header' : 'header'}>
             {/* <div>
               <Link to='/'>
                 <div className="sticker logo animated slideInUp">

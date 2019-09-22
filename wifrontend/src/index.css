@@ -246,7 +246,11 @@ button ~ button {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(100,149,237, .5);
+  background-color: rgba(100,149,237, .75);
+}
+
+input[type="file"] {
+  margin: 1em 0;
 }
 
 @media only screen and (max-width: 600px) {

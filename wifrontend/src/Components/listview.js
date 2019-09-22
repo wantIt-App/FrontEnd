@@ -103,11 +103,13 @@ class ListView extends React.Component {
           <ReactModal 
            isOpen={this.state.showModal}
            contentLabel="Minimal Modal Example"
+           className="Modal"
+           overlayClassName="Overlay animated fadeIn"
         >
           <button onClick={this.handleCloseModal} className="button">X</button>
-          <input type='file' id='single'/>
-          Item Name: <textarea onChange={this.onNameChange}/>
-          Description: <textarea onChange={this.onDescChange}/>
+          <p>Item Name:</p> <textarea onChange={this.onNameChange}/>
+          <p>Description:</p> <textarea onChange={this.onDescChange}/>
+          <input type='file' id='single' size='60' />
           <button className="button" onClick={this.onChange}>Add Item</button>
         </ReactModal>
 

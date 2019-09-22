@@ -47,9 +47,6 @@ body.scrolled .logo {
 body.scrolled .header {
   text-align: right;
 }
-body.scrolled .menu {
-  margin-top:-100px;
-}
 body.scrolled .constrain {
   margin-top: 200px;
 }
@@ -251,6 +248,42 @@ button ~ button {
 
 input[type="file"] {
   margin: 1em 0;
+}
+
+.sticker {
+  cursor: pointer;
+  position: relative;
+}
+.sticker .shadow {
+  filter: brightness(0%);
+  opacity: 0.19;
+}
+.sticker .decal {
+  height: 250px;
+  width: 250px;
+  position: absolute;
+}
+.sticker .left {
+  clip-path: inset(0px 125px 0px 0px);
+}
+.sticker .right {
+  clip-path: inset(0px 0px 0px 125px);
+  transition: 200ms ease-in-out;
+  transform: perspective(300px) rotateY(0deg);
+}
+.sticker:hover .right {
+  filter: brightness(98%);
+  transition: 200ms ease-in-out;
+  transform: perspective(400px) rotateY(-30deg);
+}
+
+.login {
+  margin: 50px auto;
+  text-align: center;
+}
+
+.login .button {
+  margin-right:10px;
 }
 
 @media only screen and (max-width: 600px) {

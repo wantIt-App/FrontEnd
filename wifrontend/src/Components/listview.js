@@ -1,7 +1,8 @@
 import React from 'react'
 import Item from './Item'
-import ReactModal from 'react-modal';
+import ReactModal from 'react-modal'
 import { API_URL } from './config'
+import { Link } from 'react-router-dom';
 
 let items = [
   {name: 'Lamp',
@@ -94,6 +95,9 @@ class ListView extends React.Component {
     render() {
       return (
         <div className='List animated fadeIn'>
+          <div className='menu'>
+            <Link to='/lists' className='button'>Back to My Lists</Link>
+          </div>
           <h1>{this.props.location.state.name}</h1>
           <button onClick={this.handleOpenModal} className="button">Add Item</button>
           <ReactModal 

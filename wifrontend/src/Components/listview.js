@@ -94,7 +94,7 @@ class ListView extends React.Component {
     render() {
       return (
         <div className='List animated fadeIn'>
-          <h1>List Name</h1>
+          <h1>{this.props.location.state.name}</h1>
           <button onClick={this.handleOpenModal} className="button">Add Item</button>
           <ReactModal 
            isOpen={this.state.showModal}

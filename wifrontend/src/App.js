@@ -21,8 +21,8 @@ class App extends React.Component {
             <img src={Logo} className='logo'/>
           </div>
           <div className='menu'>
-          <Link to='/'><button className='active'>Login</button></Link>
-          <Link to='/lists'><button>My Lists</button></Link>
+          <Link to='/' className='button'>Login</Link>
+          <Link to='/lists' className='button'>My Lists</Link>
           </div>
           <div className='constrain__inner'>
           <Switch>

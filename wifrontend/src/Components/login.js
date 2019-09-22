@@ -22,7 +22,7 @@ class Login extends React.Component {
     render() {
       return (
         <div className='login animated fadeIn'>
-        <button onClick={this.handleOpenModal}>Login / Sign Up</button>
+        <button className="button" onClick={this.handleOpenModal}>Login / Sign Up</button>
         <ReactModal 
            isOpen={this.state.showModal}
            contentLabel="Minimal Modal Example"

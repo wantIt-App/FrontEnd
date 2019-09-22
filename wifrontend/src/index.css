@@ -35,7 +35,7 @@ body::after {
 body.scrolled::after {
   background-color: #6495ed;
   opacity: .8;
-  height: 100%;
+  height: 200vh;
   transform: skewY(0deg);
   -webkit-transform: skewY(0deg);
   -ms-transform: skewY(0deg);

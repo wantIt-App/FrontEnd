@@ -63,7 +63,7 @@ h1, h2, h3, h4 {
   color: #666;
 }
 
-.button {
+.button, .button:visited {
   background-color: #fff;
   border: 1px solid #6495ed;
   border-radius: 0px;
@@ -83,6 +83,11 @@ h1, h2, h3, h4 {
   background: #6495ed;
   outline: none;
   margin: 0 0 0.5em;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: #6495ed;
 }
 
 .menu {
@@ -141,6 +146,15 @@ input {
   grid-row-gap: 1ch;
   line-height: 1;
 }
+.GridRow--two-column {
+  grid-template-columns: auto 150px;
+  border: none!important;
+  border-bottom: 1px solid #ccc!important;
+}
+.GridRow--two-column:hover {
+  border: none!important;
+  border-bottom: 1px solid #ccc!important;
+}
 .GridRow svg {
   color: #ccc;
 }
@@ -151,6 +165,11 @@ input {
 }
 .GridRow:hover svg {
   color: #6495ed;
+}
+
+.view-button {
+  align-self: center;
+  text-align: right;
 }
 
 .Want {
@@ -198,3 +217,4 @@ button ~ button {
   bottom: 0;
   background-color: rgba(100,149,237, .5);
 }
+

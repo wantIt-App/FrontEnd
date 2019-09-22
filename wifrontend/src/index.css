@@ -96,6 +96,7 @@ h1, h2, h3, h4 {
   background-color: #fff;
   border: 3px solid #6495ed;
   border-radius: 0px;
+  box-shadow: 1px 1px 1px #666;
   color: #fff; 
   cursor: pointer;
   display: inline-block;

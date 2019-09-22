@@ -94,7 +94,7 @@ h1, h2, h3, h4 {
 
 .button, .button:visited {
   background-color: #fff;
-  border: 1px solid #6495ed;
+  border: 3px solid #6495ed;
   border-radius: 0px;
   color: #fff; 
   cursor: pointer;

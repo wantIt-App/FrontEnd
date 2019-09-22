@@ -28,6 +28,13 @@ body::after {
   -ms-transform-origin: 0;
   transform-origin: 0;
   width: 100%;
+  -webkit-transition: background-color 1s ease;
+  -o-transition: background-color 1s ease;
+  transition: background-color 1s ease;
+}
+body.scrolled::after {
+  background-color: #6495ed;
+  opacity: .8;
 }
 a,
 a:link,

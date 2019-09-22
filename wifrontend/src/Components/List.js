@@ -11,7 +11,7 @@ class List extends React.Component {
           <div className='Item animated fadeIn'>
             <h2>{this.props.name}</h2>
             <p>{this.props.description}</p>
-            <Link to='/listview'><button>View List</button></Link>
+            <Link to='/listview'><button className="button">View List</button></Link>
           </div>
       )
     }

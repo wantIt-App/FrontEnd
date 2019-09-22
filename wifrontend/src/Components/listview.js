@@ -1,26 +1,11 @@
 import React from 'react'
 import Item from './Item'
-import ReactModal from 'react-modal'
+import ReactModal from 'react-modal';
 import { API_URL } from './config'
-import { Link } from 'react-router-dom';
 
-let items = [
-  {name: 'Lamp',
-   description: 'ugly lamp',
-   wants: [],
-   img: 'https://picsum.photos/100',
-   id: 1},
-   {name: 'Bed',
-   description: 'iron bed',
-   wants: ['Abi'],
-   img: 'https://picsum.photos/100',
-   id: 2},
-   {name: 'Dog',
-   description: 'Slightly Used',
-   wants: [],
-   img: 'https://picsum.photos/100',
-   id: 3},
-]
+let items = [{id: 1, name: 'Watch', description: 'Ugly Watch', img: 'https://picsum.photos/id/162/100/100'}, 
+{id: 2, name: 'Favorite Underwear', description: 'Slightly Used', img: 'https://picsum.photos/id/37/100/100'},
+{id: 3, name: 'Laptop', description: 'Pretty Nice', img: 'https://picsum.photos/id/120/100/100'}]
 
 class ListView extends React.Component {
   constructor(props) {
@@ -95,21 +80,16 @@ class ListView extends React.Component {
     render() {
       return (
         <div className='List animated fadeIn'>
-          <div className='menu'>
-            <Link to='/lists' className='button'>Back to My Lists</Link>
-          </div>
           <h1>{this.props.location.state.name}</h1>
           <button onClick={this.handleOpenModal} className="button">Add Item</button>
           <ReactModal 
            isOpen={this.state.showModal}
            contentLabel="Minimal Modal Example"
-           className="Modal"
-           overlayClassName="Overlay animated fadeIn"
         >
           <button onClick={this.handleCloseModal} className="button">X</button>
-          <p>Item Name:</p> <textarea onChange={this.onNameChange}/>
-          <p>Description:</p> <textarea onChange={this.onDescChange}/>
-          <input type='file' id='single' size='60' />
+          <input type='file' id='single'/>
+          Item Name: <textarea onChange={this.onNameChange}/>
+          Description: <textarea onChange={this.onDescChange}/>
           <button className="button" onClick={this.onChange}>Add Item</button>
         </ReactModal>
 

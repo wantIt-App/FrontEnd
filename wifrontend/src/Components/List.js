@@ -17,7 +17,8 @@ class List extends React.Component {
               <div class="view-button">
                 <Link to={{pathname: '/listview',
                 state: {
-                  name: this.props.name
+                  name: this.props.name,
+                  items: this.props.items
                 }}} className="button">View List</Link>
               </div>
             </div>

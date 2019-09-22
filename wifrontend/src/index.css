@@ -8,6 +8,10 @@ body {
   padding: 1em;
 }
 
+* {
+  transition: ease-in-out .25s;
+}
+
 body::after {
   background:rgb(250, 245, 135);
   z-index: -1;
@@ -186,6 +190,8 @@ input {
   height: 150px;
   margin-top: -120px;
 }
+
+
 
 .Modal {
   padding: 40px;

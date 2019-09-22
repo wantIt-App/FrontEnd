@@ -27,7 +27,7 @@ class Login extends React.Component {
            isOpen={this.state.showModal}
            contentLabel="Minimal Modal Example"
            className="Modal"
-           overlayClassName="Overlay"
+           overlayClassName="Overlay animated fadeIn"
         >
           <button onClick={this.handleCloseModal} className="button">X</button>
           <p>Name:</p> <textarea />

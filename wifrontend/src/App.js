@@ -18,7 +18,7 @@ class App extends React.Component {
       return (
         <div className='constrain'>
           <div className="header">
-            <Link to='/'><img src={Logo} className='logo'/></Link>
+            <Link to='/'><img src={Logo} className='logo animated slideInUp'/></Link>
           </div>
           <div className='menu'>
           <Link to='/' className='button'>Login</Link>

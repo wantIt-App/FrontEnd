@@ -315,3 +315,7 @@ input[type="file"] {
     font-size: 20px;
   }
 }
+
+.login img{
+  border: 3px solid red
+}

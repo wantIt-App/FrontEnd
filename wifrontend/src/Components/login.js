@@ -29,12 +29,12 @@ class Login extends React.Component {
            className="Modal"
            overlayClassName="Overlay"
         >
-          <button onClick={this.handleCloseModal}>X</button>
+          <button onClick={this.handleCloseModal} className="button">X</button>
           <p>Name:</p> <textarea />
           <p>Email:</p> <textarea />
           <p>Password:</p> <textarea />
-          <button>Login</button>
-          <button>Sign Up</button>
+          <button className="button">Login</button>
+          <button className="button">Sign Up</button>
         </ReactModal>
         </div>
       )

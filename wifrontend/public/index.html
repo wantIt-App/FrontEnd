@@ -28,6 +28,24 @@
     <title>Want It!</title>
   </head>
   <body>
+    <script type="text/JavaScript">
+      
+      
+
+      window.addEventListener('scroll', function() {
+        console.log('scrolling');
+          var logoContainer = document.querySelector('body');
+          scrollPosition = window.scrollY;
+        
+          if (scrollPosition >= 40) {
+            console.log('scrolled');
+              logoContainer.classList.add('scrolled');
+          } else {
+              logoContainer.classList.remove('scrolled');
+          }
+
+      });
+    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--

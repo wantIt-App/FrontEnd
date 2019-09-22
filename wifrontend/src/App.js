@@ -3,7 +3,7 @@ import Login from './Components/login'
 import MyLists from './Components/mylists'
 import ListView from './Components/listview'
 import Logo from './logo-yellow.svg'
-import { Link, Switch, Route } from 'react-router-dom'
+import { Link, Switch, Route, withRouter } from 'react-router-dom'
 
 
 class App extends React.Component {
@@ -15,7 +15,7 @@ class App extends React.Component {
   render() {
       return (
         <div className='constrain'>
-          <div className="header">
+          <div className="header" className={this.props.location.pathname == '/' ? 'login' : ''}>
             {/* <div>
               <Link to='/'>
                 <div className="sticker logo animated slideInUp">
@@ -41,5 +41,5 @@ class App extends React.Component {
 
 
 
-export default App
+  export default withRouter(App)
 

@@ -50,7 +50,7 @@ code {
   -moz-box-shadow: 2px 1px 5px 1px rgba(204,204,204,0.75);
   box-shadow: 2px 1px 5px 1px rgba(204,204,204,0.75);
   background: rgb(255, 255, 255, .9);
-  margin: 0 auto;
+  margin: 100px auto;
   max-width: 500px;
   padding: 2em;
 }
@@ -183,7 +183,8 @@ input {
 }
 
 .logo {
-  height: 100px;
+  height: 150px;
+  margin-top: -120px;
 }
 
 .Modal {

@@ -83,13 +83,9 @@ class ListView extends React.Component {
     .then(images => {
       this.setState({ img: images[0].url })
     })
-    .catch(err => {
-      err.json().then(e => {
-        console.log(e)
-      })
-    })
 
-    console.log(this.state.img, this.state.name, this.state.desc)
+
+    await console.log(this.state.img, this.state.name, this.state.desc)
   }
 
   onNameChange = e => {this.setState({ name: e.target.value })}

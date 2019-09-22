@@ -1,6 +1,7 @@
 import React from 'react'
 import Item from './Item'
 import ReactModal from 'react-modal';
+import { API_URL } from './config'
 
 let items = [
   {name: 'Lamp',
@@ -23,11 +24,18 @@ let items = [
 class ListView extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { items: items,
-      showModal: false }
+    this.state = { 
+      items: items,
+      showModal: false,
+      name: '',
+      desc: '',
+      img: '' }
 
   this.handleOpenModal = this.handleOpenModal.bind(this);
   this.handleCloseModal = this.handleCloseModal.bind(this);
+  this.onChange = this.onChange.bind(this);
+  this.onNameChange = this.onNameChange.bind(this);
+  this.onDescChange = this.onDescChange.bind(this);
 }
 
   handleOpenModal () {
@@ -37,6 +45,55 @@ class ListView extends React.Component {
   handleCloseModal () {
     this.setState({ showModal: false });
   }
+
+  onChange = async (e) => {
+    const errs = [] 
+    const files = Array.from(document.getElementById('single').files)
+    const formData = new FormData()
+    const types = ['image/png', 'image/jpeg', 'image/gif']
+
+    files.forEach((file, i) => {
+
+      if (types.every(type => file.type !== type)) {
+        errs.push(`'${file.type}' is not a supported format`)
+      }
+
+      if (file.size > 150000) {
+        errs.push(`'${file.name}' is too large, please pick a smaller file`)
+      }
+
+      formData.append(i, file)
+    })
+
+    if (errs.length) {
+      return errs.forEach(err => alert(err))
+    }
+
+
+    await fetch(`${API_URL}/image-upload`, {
+      method: 'POST',
+      body: formData
+    })
+    .then(res => {
+      if (!res.ok) {
+        throw res
+      }
+      return res.json()
+    })
+    .then(images => {
+      this.setState({ img: images[0].url })
+    })
+    .catch(err => {
+      err.json().then(e => {
+        console.log(e)
+      })
+    })
+
+    console.log(this.state.img, this.state.name, this.state.desc)
+  }
+
+  onNameChange = e => {this.setState({ name: e.target.value })}
+  onDescChange = e => {this.setState({ desc: e.target.value })}
 
     render() {
       return (
@@ -48,9 +105,10 @@ class ListView extends React.Component {
            contentLabel="Minimal Modal Example"
         >
           <button onClick={this.handleCloseModal} className="button">X</button>
-          <input type='file' id='single' />
-          Description: <textarea />
-          <button className="button">Add Item</button>
+          <input type='file' id='single'/>
+          Item Name: <textarea onChange={this.onNameChange}/>
+          Description: <textarea onChange={this.onDescChange}/>
+          <button className="button" onClick={this.onChange}>Add Item</button>
         </ReactModal>
 
           <div className='ListItems animated fadeIn delay-.25s'>
